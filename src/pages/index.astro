@@ -1,18 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import "atropos/css";
+import Atropos from "atropos/react";
 ---
 
 <Layout title="Conavi - La Abejita de los Colombianos">
 	<main>
 		<header class="container mx-auto flex justify-center p-6">
 			<img class="w-full md:max-w-lg" src="
-			logo-full.webp" alt="Conavi" />
+			logo-full.png" alt="Conavi" />
 		</header>
 		<section class="bg-black">
 			<div class="container mx-auto">
 				<h1 class="text-center py-4 md:text-lg text-white font-light">
-					El banco de los Colombianos
+					... la gente quiere a Conavi.
 				</h1>
 			</div>
 		</section>
@@ -26,10 +27,56 @@ import Card from "../components/Card.astro";
 			</p>
 		</section>
 
-		<section class="container mx-auto flex justify-center py-4">
-			<picture>
-				<img src="abejita.png" alt="La Abejita de los Colombianos" />
-			</picture>
+		<section class="container mx-auto flex justify-center py-8">
+			<Atropos
+				className="w-[90%] md:w-[80%] lg:w-[500px]"
+				activeOffset={100}
+				highlight={false}
+				client:load
+			>
+				<picture
+					class="flex border border-white p-3 bg-[#ffd534] rounded-xl w-full justify-center"
+				>
+					<div class="bg-pattern w-full rounded-lg p-2">
+						<div class="flex justify-between w-max-full px-2">
+							<img
+								src="/card_name.png"
+								alt="Conavi"
+								class="w-[63%] lg:w-[300px] lg:h-[70px]"
+								data-atropos-offset="15"
+							/>
+							<img
+								src="/card_cirrus.png"
+								alt="Conavi"
+								class="w-[20%] lg:w-[100px] lg:h-[60px]"
+								data-atropos-offset="30"
+							/>
+						</div>
+						<div class="px-6 lg:-mt-4">
+							<img
+								src="/card_face.png"
+								alt="Conavi"
+								class="w-[45%] lg:w-[150px] lg:h-[130px]"
+								data-atropos-offset="40"
+							/>
+						</div>
+						<div class="flex justify-between items-end p-4">
+							<img
+								src="/card_text.png"
+								alt="Conavi"
+								class="w-[60%] lg:w-[200px] lg:h-[30px]"
+								data-atropos-offset="30"
+							/>
+							<img
+								src="/card_maestro.png"
+								alt="Conavi"
+								class="w-[20%] lg:w-[100px] lg:h-[60px]"
+								data-atropos-offset="30"
+							/>
+						</div>
+					</div>
+				</picture>
+			</Atropos>
 		</section>
 
 		<section class="container mx-auto flex justify-center py-8 pb-20">
@@ -51,7 +98,7 @@ import Card from "../components/Card.astro";
 					class="text-white text-sm text-center flex justify-center gap-1 items-center"
 				>
 					Made with 💛 by <a href="https://elepea.com" target="_blank"
-						><img src="/elepea.png" class="w-8 h-6" /></a
+						><img src="/elepea.png" class="w-8 h-5" /></a
 					>
 				</p>
 			</div>
