@@ -1,0 +1,60 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Conavi - La Abejita de los Colombianos">
+	<main>
+		<header class="container mx-auto flex justify-center p-6">
+			<img class="w-full md:max-w-lg" src="
+			logo-full.webp" alt="Conavi" />
+		</header>
+		<section class="bg-black">
+			<div class="container mx-auto">
+				<h1 class="text-center py-4 md:text-lg text-white font-light">
+					El banco de los Colombianos
+				</h1>
+			</div>
+		</section>
+		<section
+			class="container mx-auto flex flex-col md:flex-row justify-center pt-8 px-4"
+		>
+			<p class="text-lg md:text-xl text-center italic">
+				"Ir a Conavi era como ir donde la tía chévere donde lo recibían
+				a uno siempre con una sonrisa y lo hacían sentir importante así
+				su cuenta fuera de centavos"
+			</p>
+		</section>
+
+		<section class="container mx-auto flex justify-center py-4">
+			<picture>
+				<img src="abejita.png" alt="La Abejita de los Colombianos" />
+			</picture>
+		</section>
+
+		<section class="container mx-auto flex justify-center py-8 pb-20">
+			<div class="flex flex-col items-center">
+				<h2 class="text-2xl font-bold pb-4">Historia de Conavi</h2>
+				<iframe
+					class="w-[100vw] h-[250px] max-w-[500px]"
+					src="https://www.youtube.com/embed/anfe1VgNtHw?si=FaxWoJSsdZdIoKjy&start=32&cc_load_policy=1"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen></iframe>
+			</div>
+		</section>
+
+		<section class="bg-black">
+			<div class="container mx-auto py-4 flex flex-col">
+				<p
+					class="text-white text-sm text-center flex justify-center gap-1 items-center"
+				>
+					Made with 💛 by <a href="https://elepea.com" target="_blank"
+						><img src="/elepea.png" class="w-8 h-6" /></a
+					>
+				</p>
+			</div>
+		</section>
+	</main>
+</Layout>
