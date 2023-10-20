@@ -1,5 +1,5 @@
 ---
-// Supports weights 300-800
+import "@fontsource/roboto";
 import "@fontsource-variable/open-sans";
 interface Props {
 	title: string;
@@ -69,10 +69,22 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	@font-face {
+		font-family: "Helvetica";
+		src:
+			url("/fonts/Helvetica-BlackOblique.woff2") format("woff2"),
+			url("/fonts/Helvetica-BlackOblique.woff") format("woff"),
+			url("/fonts/Helvetica-BlackOblique.ttf") format("truetype");
+		font-weight: 900;
+		font-style: italic;
+		font-display: swap;
+	}
+
 	:root {
 		background: #ffd534;
 	}
 	body {
-		font-family: "Open Sans Variable", sans-serif;
+		/* font-family: "Open Sans Variable", sans-serif; */
+		font-family: "Roboto", sans-serif;
 	}
 </style>

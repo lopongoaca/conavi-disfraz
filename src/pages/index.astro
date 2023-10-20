@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import "atropos/css";
 import Atropos from "atropos/react";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="Conavi - La Abejita de los Colombianos">
@@ -12,7 +13,9 @@ import Atropos from "atropos/react";
 		</header>
 		<section class="bg-black">
 			<div class="container mx-auto">
-				<h1 class="text-center py-4 md:text-lg text-white font-light">
+				<h1
+					class="text-center py-4 md:text-lg text-white font-light italic"
+				>
 					... la gente quiere a Conavi.
 				</h1>
 			</div>
@@ -79,9 +82,27 @@ import Atropos from "atropos/react";
 			</Atropos>
 		</section>
 
+		<section class="container mx-auto py-8 overflow-hidden">
+			<div class="flex flex-col items-center">
+				<h2 class="text-5xl font-bold font-helvetica -skew-x-12">
+					HALLOWEEN
+				</h2>
+				<p class="pb-4 italic">Un recuerdo que nunca olvidaremos</p>
+
+				<div class="flex -space-x-32 justify-center pt-4">
+					<Card url="01.png" />
+					<Card url="02.png" />
+					<Card url="03.png" />
+				</div>
+			</div>
+		</section>
+
 		<section class="container mx-auto flex justify-center py-8 pb-20">
 			<div class="flex flex-col items-center">
-				<h2 class="text-2xl font-bold pb-4">Historia de Conavi</h2>
+				<h2 class="text-5xl font-bold font-helvetica -skew-x-12">
+					HISTORIA
+				</h2>
+				<p class="pb-4 italic">Conavi, el banco de la gente</p>
 				<iframe
 					class="w-[100vw] h-[250px] max-w-[500px]"
 					src="https://www.youtube.com/embed/anfe1VgNtHw?si=FaxWoJSsdZdIoKjy&start=48&cc_load_policy=1"

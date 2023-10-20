@@ -9,6 +9,9 @@ export default {
 			backgroundImage: (theme) => ({
 				'pattern': "url('/trama.png')"
 			}),
+			fontFamily: {
+				'helvetica': ['Helvetica', 'sans-serif']
+			}
 		},
 	},
 	plugins: [],
