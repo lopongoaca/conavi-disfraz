@@ -1,10 +1,9 @@
 ---
 import "@fontsource/roboto";
-import "@fontsource-variable/open-sans";
+// import "@fontsource-variable/open-sans";
 interface Props {
 	title: string;
 }
-
 const { title } = Astro.props;
 ---
 
@@ -86,5 +85,8 @@ const { title } = Astro.props;
 	body {
 		/* font-family: "Open Sans Variable", sans-serif; */
 		font-family: "Roboto", sans-serif;
+	}
+	h2 {
+		font-family: "Helvetica", sans-serif;
 	}
 </style>
