@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import "atropos/css";
 import Atropos from "atropos/react";
+import { VideoModal } from "../components/VideoModal.jsx";
 import Card from "../components/Card.astro";
 ---
 
@@ -104,13 +105,7 @@ import Card from "../components/Card.astro";
 					HISTORIA
 				</h2>
 				<p class="pb-4 italic">Conavi, el banco de la gente</p>
-				<iframe
-					class="w-[100vw] h-[250px] max-w-[500px]"
-					src="https://www.youtube.com/embed/anfe1VgNtHw?si=FaxWoJSsdZdIoKjy&start=48&cc_load_policy=1"
-					title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-					allowfullscreen></iframe>
+				<VideoModal client:load id="anfe1VgNtHw" start={48} />
 			</div>
 		</section>
 
@@ -127,3 +122,7 @@ import Card from "../components/Card.astro";
 		</section>
 	</main>
 </Layout>
+
+<style>
+	@import "node_modules/react-modal-video/css/modal-video.min.css";
+</style>
