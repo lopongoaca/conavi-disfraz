@@ -17,7 +17,7 @@ export const PlayButton = () => {
                             d="M5,0 L30,15 L5,30z"
                             fill="none"
                             stroke="#000"
-                            stroke-width="1"></path>
+                            strokeWidth="1"></path>
                     </svg>
                 </div>
             </a>
