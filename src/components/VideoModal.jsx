@@ -1,26 +1,25 @@
-import ModalVideo from 'react-modal-video';
-import { useState } from "react"
-import { PlayButton } from "./PlayButton.jsx"
+import ReactPlayerModal from '@octa-labs/react-player-modal';
+import { useState } from "react";
+import { PlayButton } from "./PlayButton";
 
 export const VideoModal = ({ id, start }) => {
     const [isOpen, setOpen] = useState(false)
+    const customStyles = {
+        background: 'rgba(255, 255, 255, 0.9)',
+        padding: '20px',
+        borderRadius: '10px',
+        xColor: 'black'
+    };
 
     return (
         <>
-            <ModalVideo
-                channel="youtube"
-                youtube={{
-                    cc_load_policy: 1,
-                    start: start
-                }}
-                isOpen={isOpen}
-                videoId={id}
-                onClose={() => setOpen(false)}
+            <ReactPlayerModal
+                url={`https://www.youtube.com/watch?v=${id}`}
+                modalStyle={customStyles}
+                buttonClassName="button button--secondary button--outline button--golden button--lg"
+                buttonText={<PlayButton />}
             />
-            <button className="btn-primary relative flex justify-center" onClick={() => setOpen(true)}>
-                <PlayButton />
-                <img src='/video-btn.png' alt='play video' className='border border-black rounded-xl shadow-lg lg:max-w-[80%] w-[90%]' />
-            </button>
         </>
+
     );
 }

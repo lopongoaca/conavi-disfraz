@@ -1,9 +1,9 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import "atropos/css";
 import Atropos from "atropos/react";
-import { VideoModal } from "../components/VideoModal.jsx";
 import Card from "../components/Card.astro";
+import { VideoModal } from "../components/VideoModal";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Conavi - La Abejita de los Colombianos">
@@ -122,7 +122,3 @@ import Card from "../components/Card.astro";
 		</section>
 	</main>
 </Layout>
-
-<style>
-	@import "/node_modules/react-modal-video/css/modal-video.min.css";
-</style>
